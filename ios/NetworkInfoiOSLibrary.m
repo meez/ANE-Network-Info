@@ -36,7 +36,7 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 #import <SystemConfiguration/SCNetworkReachability.h>
-#import "Reachability.h"
+#import "ANIReachability.h"
 
 
 void * tmpAddrPtr = NULL;

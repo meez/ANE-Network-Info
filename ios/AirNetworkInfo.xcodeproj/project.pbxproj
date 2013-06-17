@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		14E0B0371418DFC800DA2843 /* NetworkInfoiOSLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E0B0351418DFC800DA2843 /* NetworkInfoiOSLibrary.m */; };
-		39E4C13D163599C700995941 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 39E4C13B163599C700995941 /* Reachability.h */; };
-		39E4C13E163599C700995941 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E4C13C163599C700995941 /* Reachability.m */; };
 		39E4C140163599D900995941 /* FlashRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 39E4C13F163599D900995941 /* FlashRuntimeExtensions.h */; };
 		39E4C142163599E800995941 /* NetworkInfoiOSLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 39E4C141163599E800995941 /* NetworkInfoiOSLibrary.h */; };
+		4FA0CE8F176F0CF60042CD3A /* ANIReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FA0CE8D176F0CF60042CD3A /* ANIReachability.h */; };
+		4FA0CE90176F0CF60042CD3A /* ANIReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA0CE8E176F0CF60042CD3A /* ANIReachability.m */; };
 		5A7C430F153F991A005242AA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7C430C153F9901005242AA /* SystemConfiguration.framework */; };
 		AA747D9F0F9514B9006C5449 /* AirNetworkInfo_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* AirNetworkInfo_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
@@ -19,10 +19,10 @@
 
 /* Begin PBXFileReference section */
 		14E0B0351418DFC800DA2843 /* NetworkInfoiOSLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkInfoiOSLibrary.m; sourceTree = "<group>"; };
-		39E4C13B163599C700995941 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		39E4C13C163599C700995941 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		39E4C13F163599D900995941 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlashRuntimeExtensions.h; path = "/Applications/Adobe Flash Builder 4.6/sdks/4.6.0/include/FlashRuntimeExtensions.h"; sourceTree = "<absolute>"; };
+		39E4C13F163599D900995941 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlashRuntimeExtensions.h; path = ../../../../../dev/Flash/air_3.5_flex_4.6/include/FlashRuntimeExtensions.h; sourceTree = "<group>"; };
 		39E4C141163599E800995941 /* NetworkInfoiOSLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkInfoiOSLibrary.h; sourceTree = "<group>"; };
+		4FA0CE8D176F0CF60042CD3A /* ANIReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANIReachability.h; sourceTree = "<group>"; };
+		4FA0CE8E176F0CF60042CD3A /* ANIReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANIReachability.m; sourceTree = "<group>"; };
 		5A7C430C153F9901005242AA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AA747D9E0F9514B9006C5449 /* AirNetworkInfo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirNetworkInfo_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -82,9 +82,9 @@
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4FA0CE8D176F0CF60042CD3A /* ANIReachability.h */,
+				4FA0CE8E176F0CF60042CD3A /* ANIReachability.m */,
 				39E4C13F163599D900995941 /* FlashRuntimeExtensions.h */,
-				39E4C13B163599C700995941 /* Reachability.h */,
-				39E4C13C163599C700995941 /* Reachability.m */,
 				AA747D9E0F9514B9006C5449 /* AirNetworkInfo_Prefix.pch */,
 			);
 			name = "Other Sources";
@@ -98,9 +98,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA747D9F0F9514B9006C5449 /* AirNetworkInfo_Prefix.pch in Headers */,
-				39E4C13D163599C700995941 /* Reachability.h in Headers */,
 				39E4C140163599D900995941 /* FlashRuntimeExtensions.h in Headers */,
 				39E4C142163599E800995941 /* NetworkInfoiOSLibrary.h in Headers */,
+				4FA0CE8F176F0CF60042CD3A /* ANIReachability.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14E0B0371418DFC800DA2843 /* NetworkInfoiOSLibrary.m in Sources */,
-				39E4C13E163599C700995941 /* Reachability.m in Sources */,
+				4FA0CE90176F0CF60042CD3A /* ANIReachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
