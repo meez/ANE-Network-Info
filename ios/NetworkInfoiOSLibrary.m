@@ -40,7 +40,6 @@
 #import <SystemConfiguration/SCNetworkReachability.h>
 #import "Reachability.h"
 
-
 static FREContext AirNICtx = nil;
 
 Reachability *reachability;
@@ -321,11 +320,13 @@ FREObject findInterfaces(FREContext ctx, void* funcData, uint32_t argc, FREObjec
         {
             // Reinstantiate the InterfaceProperty Array 
             FRENewObject((const uint8_t*)"Array", 0, NULL, &InterfacePropArray, NULL);
+
+			if(_networkInfoDoLogging)
+	            NSLog(@"AddrFamily(%s)=%d - recreating InterfacePropArray",ifa->ifa_name,ifa_ifa_addr->sa_family);
         }		  	
 		
 		
 	} // end for-loop
-	
 	
 	
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++all the interfaces has been iterated +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -351,7 +352,6 @@ FREObject findInterfaces(FREContext ctx, void* funcData, uint32_t argc, FREObjec
 	// Put the new FREObject into the returnInterfacesArray
 	
     FRESetArrayElementAt(returnInterfacesArray, i++, tempNetworkInterface);
-	
 	
 	// Reinstantiate the InterfaceProperty Array 
 	FRENewObject((const uint8_t*)"Array", 0, NULL, &InterfacePropArray, NULL);
@@ -546,25 +546,6 @@ FREObject getInterfaceProperties(struct ifaddrs *ifa)
 	return Addrstemp;
 }
 
-
-/*
-FREObject connectedToNetwork(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[])
-{
-    Reachability *r = [Reachability reachabilityWithHostName:@"www.google.com"];
-	NetworkStatus internetStatus = [r currentReachabilityStatus];
-	BOOL internet;
-	if ((internetStatus != ReachableViaWiFi) && (internetStatus != ReachableViaWWAN)) {
-		internet = NO;
-	} else {
-		internet = YES;
-	}
-    FREObject retVal = 
-	return internet;   
-}*/
-
-
-
-
 // ContextInitializer()
 //
 // The context initializer is called when the runtime creates the extension context instance.
@@ -588,7 +569,7 @@ void NetworkInfoContextInitializer(void* extData, const uint8_t* ctxType, FRECon
     
 	func[0].name = (const uint8_t*)"getInterfaces";
 	func[0].functionData = NULL;
-func[0].function = &findInterfaces;
+	func[0].function = &findInterfaces;
     
     func[1].name = (const uint8_t*)"setLogging";
 	func[1].functionData = NULL;
